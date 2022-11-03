@@ -6,30 +6,30 @@ class LinearEquationRunner {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Welcome!");
-        System.out.println("Enter coordinate 1: (x,y)");
+        System.out.print("Enter coordinate 1 (WITH PARENTHESES): ");
         String coord1 = scan.nextLine();
 
-        int temp = coord1.indexOf(",");
-        String temp1 = coord1.substring(1, temp);
-        int x1 = Integer.parseInt(temp1);
+        int num = coord1.indexOf(",");
+        String num1 = coord1.substring(1, num);
+        int x1 = Integer.parseInt(num1);
 
 
-        int temp2 = coord1.indexOf( ")" );
-        String temp3 = coord1.substring(coord1.indexOf(",") + 1, temp2);
-        int y1 = Integer.parseInt(temp3);
+        int num2 = coord1.indexOf( ")" );
+        String num3 = coord1.substring(coord1.indexOf(",") + 1, num2);
+        int y1 = Integer.parseInt(num3);
 
-
-        System.out.println("Enter coordinate 2: (x,y)");
+        System.out.println(" ");
+        System.out.print("Enter coordinate 2 (WITH PARENTHESES): ");
         String coord2 = scan.nextLine();
 
-        int temp4 = coord2.indexOf(",");
-        String temp5 = coord2.substring(1, temp4);
-        int x2 = Integer.parseInt(temp5);
+        int num4 = coord2.indexOf(",");
+        String num5 = coord2.substring(1, num4);
+        int x2 = Integer.parseInt(num5);
 
 
-        int temp6 = coord2.indexOf( ")" );
-        String temp7 = coord2.substring(coord2.indexOf(",") + 1, temp6);
-        int y2 = Integer.parseInt(temp7);
+        int num6 = coord2.indexOf( ")" );
+        String num7 = coord2.substring(coord2.indexOf(",") + 1, num6);
+        int y2 = Integer.parseInt(num7);
 
 
         if(x1 == x2){
@@ -45,6 +45,7 @@ class LinearEquationRunner {
             System.out.println(equation.lineInfo());
             System.out.println();
             double testX = 4;
+            System.out.println("Coordinate for x: " + equation.coordinateForX(testX));
 
         }
 
